@@ -1,0 +1,13 @@
+.separator | 
+
+.import user.dat Users
+-- Replace all token ‘NULL’ values with null
+update Users set location=null where location="NULL"; 
+ -- Replace all token ‘NULL’ values with null
+ update Users set country=null where country="NULL";
+
+.import bid.dat Bids
+.import category.dat Categories
+.import item.dat Items
+-- Replace all token ‘NULL’ values with null
+update Items set buyPrice=null where buyPrice="NULL"; 

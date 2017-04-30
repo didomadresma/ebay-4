@@ -1,0 +1,30 @@
+{% extends "app_base.html" %} {% block content %}
+<h2 style="color: green;">Result</h2>
+<div>
+	<table class="table table-striped table-bordered">
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Current Price</th>
+			<th>Buy Price</th>
+			<th>Bidders</th>
+			<th>Start Time</th>
+			<th>End Time</th>
+			<th>Seller</th>
+		</tr>
+		{% for res in result %}
+		<tr>
+			<td><a href="/view_item?itemID={{res.itemID}}">{{res.itemID}}</a></td>
+			<td>{{res.name}}</td>
+			<td>{{res.currently}}</td>
+			<td>{{res.buyPrice}}</td>
+			<td>{{res.numberOfBids}}</td>
+			<td>{{res.started}}</td>
+			<td>{{res.ends}}</td>
+			<td>{{res.sellerID}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+</div>
+
+{% endblock %}

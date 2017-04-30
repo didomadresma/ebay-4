@@ -1,0 +1,39 @@
+1. final文件夹下面有 database 和 web.py 两个文件夹
+
+2. database用来生成所用到的数据库，web.py 是web应用程序
+
+3. 生成数据库的方法
+	1) cd database
+	2) rm -rf *.dat
+	3) rm -rf *.db
+	4) bash runParser.sh
+	5) bash createDatabase.sh
+	6) cp auction.db ../web.py
+	
+4. 启动应用程序
+	1）cd web.py
+	2) python auctionbase.py
+	3) 访问 http://localhost:8080/
+
+5. 网页功能
+	1）AuctionBase 首页
+	2）Current Time 查看 “当前时间“（数据库中存储的）
+	3) Select a Time 修改”当前时间“
+	4）Add bid 进行竞标
+	5）Add New User 添加新用户
+	6）Search 根据条件进行查询
+		1. Item ID
+		2. Category
+		3. Description
+		4. Min Price
+		5. Max Price
+		6. Open 还是 Close 的状态，两者亦可同时存在
+	7）Search 查询之后会出现一个查询结果页面，该页面以表格的形式展示了查询结果，表格第一列ItemID有超链接，点击可以进入查看该Item全部详细信息
+	8）View Detail Item 的全部详细信息
+	
+	
+	
+	
+	
+	
+	
